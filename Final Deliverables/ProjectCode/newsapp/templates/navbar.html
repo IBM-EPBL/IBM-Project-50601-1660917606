@@ -1,0 +1,51 @@
+
+<!-- ################ navbar ##############-->
+<nav class="navbar fixed-top  navbar-expand-lg navbar-light " style="background-color: #e3f2fd;">
+    <a class="navbar-brand" href="#">NewsToday</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item ">
+          <a class="nav-link" href="{% url 'home' %}?category=general,{{country}}">General<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'home' %}?category=business,{{country}}">Business</a>
+        </li>
+        <li class="nav-item ">
+          <a class="nav-link" href="{% url 'home' %}?category=entertainment,{{country}}">Entertainment<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'home' %}?category=health,{{country}}">Health</a>
+        </li>
+        <li class="nav-item ">
+          <a class="nav-link" href="{% url 'home' %}?category=technology,{{country}}">Technology<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'home' %}?category=sports,{{country}}">Sports</a>
+        </li>
+        <li class="nav-item ">
+          <a class="nav-link" href="{% url 'home' %}?category=science,{{country}}">Science<span class="sr-only">(current)</span></a>
+        </li>
+
+        <li class="nav-item dropdown active">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown,{{country}}" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Country
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="{% url 'home' %}?country=in,{{category}}">India</a>
+            <a class="dropdown-item" href="{% url 'home' %}?country=us,{{category}}">USA</a>   
+            <a class="dropdown-item" href="{% url 'home' %}?country=cn,{{category}}">China</a>
+            <a class="dropdown-item" href="{% url 'home' %}?country=ae,{{category}}">UAE</a>
+            <a class="dropdown-item" href="{% url 'home' %}?country=ru,{{category}}">Russia</a>
+            <a class="dropdown-item" href="{% url 'home' %}?country=ca,{{category}}">Canada</a>
+            <a class="dropdown-item" href="{% url 'home' %}?country=il,{{category}}">Italy</a>
+            <a class="dropdown-item" href="{% url 'home' %}?country=gr,{{category}}">Germany</a>
+            <a class="dropdown-item" href="{% url 'home' %}?country=sa,{{category}}">South Africa</a>    
+        </li>
+      </ul>
+
+    </div>
+  </nav>
