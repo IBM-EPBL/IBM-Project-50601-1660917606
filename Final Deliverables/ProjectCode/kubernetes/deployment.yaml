@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ibmcloud-deployment
+  labels:
+    app: ibmcloud
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ibmcloud
+  template:
+    metadata:
+      labels:
+        app: ibmcloud
+    spec:
+      containers:
+      - name: ibmcloud
+        image: shivakumarnarayanan/ibmcloud:latest
+        ports:
+        - containerPort: 8000
